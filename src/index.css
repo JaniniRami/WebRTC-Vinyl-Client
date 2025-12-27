@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-amber-900 via-yellow-900 to-amber-800 min-h-screen;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(139, 69, 19, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(101, 67, 33, 0.3) 0%, transparent 50%);
+  }
+}
+
+@layer utilities {
+  .vintage-text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 10px rgba(139, 69, 19, 0.3);
+  }
+  
+  .vintage-border {
+    border: 3px solid;
+    border-image: linear-gradient(135deg, #8b4513, #654321, #8b4513) 1;
+    box-shadow: 
+      inset 0 0 20px rgba(0, 0, 0, 0.3),
+      0 10px 30px rgba(0, 0, 0, 0.5),
+      0 0 0 2px rgba(139, 69, 19, 0.2);
+  }
+  
+  .vintage-border-b {
+    border-bottom: 4px solid;
+    border-image: linear-gradient(135deg, #8b4513, #654321, #8b4513) 1;
+    box-shadow: 
+      inset 0 0 20px rgba(0, 0, 0, 0.3),
+      0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+  
+  @keyframes spin-vinyl {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-vinyl {
+    animation: spin-vinyl 3.5s linear infinite;
+  }
+}
+
