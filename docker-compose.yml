@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:80"
+      - "3431:80"
     container_name: wireless-player
     restart: unless-stopped
 
